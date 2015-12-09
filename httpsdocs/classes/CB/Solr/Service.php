@@ -84,7 +84,7 @@ class Service
 
         if (empty($this->solr_handler)) {
             if (!class_exists('\\Apache_Solr_Service', false)) {
-                require_once $this->client;
+                require_once 'Apache/Solr/Service.php';
             }
 
             if (!class_exists('\\Apache_Solr_Compatibility_Solr4CompatibilityLayer', false)) {
